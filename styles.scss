@@ -6,11 +6,6 @@ $dark-blue-card-bg: hsl(216, 50%, 16%);
 $dark-blue-line: hsl(215, 32%, 27%);
 $white-font: hsl(0, 0%, 100%);
 
-@mixin flexAndCentre {
-  display: flex;
-  justify-content: center;
-}
-
 body {
   font-family: "Outfit", sans-serif;
   font-size: 18px;
@@ -19,12 +14,13 @@ body {
   background-color: $dark-blue-main-bg;
   width: 100vw;
   height: 100vh;
-  @include flexAndCentre();
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .card-component {
-  @include flexAndCentre();
+  display: flex;
   background-color: $dark-blue-card-bg;
   width: 327px;
   height: 543px;
@@ -32,19 +28,48 @@ body {
   justify-content: space-around;
   flex-direction: column;
   border-radius: 10px;
+
   .nft-image {
     width: 278px;
     height: 278px;
     border-radius: 10px;
   }
-  .nft-title {
-    color: $white-font;
-    font-size: 1.22rem;
-    font-weight: 600;
-  }
-  .nft-description {
-    color: $soft-blue;
-    line-height: 26px;
-    font-weight: 300;
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    .nft-title {
+      color: $white-font;
+      font-size: 1.22rem;
+      font-weight: 600;
+    }
+    .nft-description {
+      color: $soft-blue;
+      line-height: 26px;
+      font-weight: 300;
+    }
+    .info-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .info {
+        display: flex;
+        flex-direction: row;
+        height: 19px;
+        p {
+          margin: 0;
+        }
+        .eth-image {
+          width: 11px;
+          height: 18px;
+        }
+        .clock-image {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
   }
 }
