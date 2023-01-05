@@ -9,10 +9,10 @@ $white-font: hsl(0, 0%, 100%);
 @mixin flexAndCentre {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 body {
+  font-family: "Outfit", sans-serif;
   font-size: 18px;
   margin: 0;
   box-sizing: border-box;
@@ -20,6 +20,7 @@ body {
   width: 100vw;
   height: 100vh;
   @include flexAndCentre();
+  align-items: center;
 }
 
 .card-component {
@@ -27,10 +28,23 @@ body {
   background-color: $dark-blue-card-bg;
   width: 327px;
   height: 543px;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
+  flex-direction: column;
+  border-radius: 10px;
   .nft-image {
     width: 278px;
     height: 278px;
+    border-radius: 10px;
+  }
+  .nft-title {
+    color: $white-font;
+    font-size: 1.22rem;
+    font-weight: 600;
+  }
+  .nft-description {
+    color: $soft-blue;
+    line-height: 26px;
+    font-weight: 300;
   }
 }
