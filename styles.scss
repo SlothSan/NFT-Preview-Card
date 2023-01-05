@@ -1,0 +1,36 @@
+/* Setup colors used for page */
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$dark-blue-main-bg: hsl(217, 54%, 11%);
+$dark-blue-card-bg: hsl(216, 50%, 16%);
+$dark-blue-line: hsl(215, 32%, 27%);
+$white-font: hsl(0, 0%, 100%);
+
+@mixin flexAndCentre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: 18px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $dark-blue-main-bg;
+  width: 100vw;
+  height: 100vh;
+  @include flexAndCentre();
+}
+
+.card-component {
+  @include flexAndCentre();
+  background-color: $dark-blue-card-bg;
+  width: 327px;
+  height: 543px;
+  flex-direction: column;
+  justify-content: space-around;
+  .nft-image {
+    width: 278px;
+    height: 278px;
+  }
+}
